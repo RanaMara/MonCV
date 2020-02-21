@@ -1,0 +1,19 @@
+.Experiences_Formation{
+text-decoration: underline;
+}
+.title{
+    text-align: center;
+}
+.p{
+    text-align: justify;
+}
+.th{
+    text-align: left;
+}
+.table,th,tr{
+    border: 1px solid black;
+}
+.ContactInfo
+{
+text-align: center;
+}
