@@ -3,17 +3,59 @@ text-decoration: underline;
 }
 .title{
     text-align: center;
+    color: steelblue;
 }
 .p{
     text-align: justify;
 }
-.th{
-    text-align: left;
+h3,h4{
+    color: steelblue;  
 }
-.table,th,tr{
-    border: 1px solid black;
-}
+
 .ContactInfo
 {
 text-align: center;
 }
+.resume{
+    background-color: rgb(212, 207, 207);  
+}
+section{
+    /* background-color: rgb(212, 207, 207); */
+/* width: 60%; */
+text-align: justify;
+word-wrap: break-word;
+}
+#conteneur{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.element:nth-child(1){
+    flex: 1; 
+    background-color: rgb(212, 207, 207);
+    padding-right: 10px;
+}
+.element:nth-child(2){
+     flex: 2; 
+    background-color: yellow;
+}
+#conteneurExperience{
+    display: flex; 
+    justify-content: space-between; 
+}
+.conteneurExperienceElement:nth-child(1){
+    align-self: flex-start;
+    flex:1;
+}
+.conteneurExperienceElement:nth-child(1){
+    flex:2;
+    background-color: yellow;
+    align-self: flex-end;
+}
+
+
+/* #InfoetLoisirsConteure{
+    display: flex;
+    flex-direction: column;
+} */
