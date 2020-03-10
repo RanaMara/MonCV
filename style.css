@@ -80,7 +80,7 @@ body{
         padding-top: 15px;
         background-color: #D3D3D3;
     }
-    #content .Experince{
+    #content .experince{
         display: flex;
         color: steelblue; 
         font-weight: bold;
@@ -90,7 +90,7 @@ body{
         display: flex;
         justify-content: space-between;
     }
-    ul.decorationOfList{
+    ul .decorationOfList{
         list-style-type:circle;
     }
     #content .resume h2{
@@ -108,4 +108,10 @@ body{
     h3,h4{
         color: steelblue;  
         text-decoration: underline;
+    }
+    .profileImage img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+
     }

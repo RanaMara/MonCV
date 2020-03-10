@@ -1,0 +1,154 @@
+#container{
+    display: flex;
+    font-family: sans-serif;
+}
+
+#container #sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #FDD835;
+    width: 30%;
+    height: 1200px;
+    margin: auto;
+}
+
+#container #content{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    background-color:#FAFAFA;
+    margin: auto;
+    padding: 5%;
+}
+#sidebar .profileImage{
+    align-items: center;
+}
+
+#sidebar .profileImage img{
+    border-radius: 100%;
+    width: 218px;
+    height: auto;
+    display: block;
+    box-shadow: 0px 0px 10px;
+    margin: auto;
+    margin-top: 67px;
+}
+
+#sidebar .contactInfo{
+    margin-top: 46px;
+}
+.contactInfo li{
+    margin: 1em 0;
+}
+
+#sidebar h1{
+    text-transform: uppercase;
+    background-color: #424242;
+    color: #FDD835;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+}
+
+#sidebar p{
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+}
+#sidebar .interests{
+    align-items: flex;
+    align-content: space-around;
+}
+#content .lastName{
+    text-transform: uppercase;
+    color: black;
+    font-size: xx-large;
+}
+#content .firstName{
+    text-transform: uppercase;
+    color: #FDD835;
+    font-size: xx-large;
+}
+
+#content .job{
+    text-transform: capitalize;
+    color: #424242;
+    font-size: large;
+}
+
+#content .job .jobFirstPart{
+    border-bottom: 3px solid #FDD835;
+}
+.interests i{
+    border: solid black;
+    width: 50px;
+    height: 50px;
+}
+
+#content h1{
+    color: black;
+    text-transform: uppercase;
+    border-bottom: 3px solid #FDD835;
+
+}
+
+#content #recommendation{
+    display: flex;
+    flex-direction: row;
+}
+
+.ContactName{
+    text-transform: uppercase;
+}
+
+.firstContact{
+    width: 50%;
+}
+
+.secondContact{
+    width: 50%;
+}
+
+.i {
+    color : #FDD835;
+}
+
+#container ul{
+    list-style: none;
+}
+
+#content .educationAndexperince{
+    display: flex;
+    flex-direction: column;
+}
+.educationAndexperinceItem .descriptionPart{
+    width: 70%;
+}
+
+.educationAndexperince .educationAndexperinceItem{
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+}
+
+.descriptionPart .companyName{
+    text-transform: uppercase;
+}
+
+.educationAndexperinceItem .durationPart{
+    width: 25%;
+    padding-left: 3%;
+}
+.descriptionPart .jobTitle{
+    text-transform: capitalize;
+}
+
+#sidebar .interestsSection{
+    align-items: flex-end ;
+}
+
+.nameAndCareerSection{
+    margin-bottom: 100px;
+}
