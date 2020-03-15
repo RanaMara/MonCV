@@ -1,6 +1,15 @@
+
+@font-face{    
+	font-family: 'Roboto';
+	src: url('webFonts/RobotoCondensed-Light-webfont.eot');
+	src: url('webFonts/RobotoCondensed-Light-webfont.eot?iefix') format('eot'),
+	     url('webFonts/RobotoCondensed-Light-webfont.woff') format('woff'),
+	     url('webFonts/RobotoCondensed-Light-webfont.ttf') format('truetype'),
+	     url('webFonts/RobotoCondensed-Light-webfont.svg#webFonts') format('svg');
+}
 body{
     background-color: black;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     word-wrap: break-word;
 }
 i{
@@ -8,9 +17,6 @@ i{
 }
 #container{
     display: flex;
-    font-family: sans-serif;
-    /* max-width: 1200px;
-    min-width: 360px; */
     width: 100%;
     margin: 0 auto;
 }
@@ -21,7 +27,6 @@ i{
     width: 30%;
     margin: 0 auto;
 }
-
 #container #content{
     display: flex;
     flex-direction: column;
@@ -40,18 +45,15 @@ i{
     width: 218px;
     height: auto;
     display: block;
-    /* box-shadow: 0px 0px 10px; */
     margin: auto;
     margin-top: 67px;
 }
-
 #sidebar .contactInfo{
     margin-top: 46px;
 }
 .contactInfo li{
     margin: 1em 0;
 }
-
 #sidebar h1{
     text-transform: uppercase;
     background-color: #424242;
@@ -60,11 +62,10 @@ i{
     width: 100%;
     padding: 10px 0;
 }
-
 #sidebar p{
     text-align: justify;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
 }
 #sidebar .interests{
     align-items: flex;
@@ -167,20 +168,22 @@ i{
 .about{
     flex: 2;
 }
+
+/* On the screens, when the window width is at most 768px for the smartphone */
 @media screen and ( max-width : 768px){
     #container{
         flex-direction: column;
         width: 100%;
-        /* margin: 0 auto; */
     }
     #container #sidebar{
         width: 100%;
     }
-    
     #container #content{
         width: 100%;
     }
 }
+
+/* On the screens, when the window width is between 769px and at most 991px for the tablet */
 @media screen and ( min-width : 769px) and ( max-width : 991px){
     
     .educationAndexperinceItem .descriptionPart{
@@ -189,6 +192,10 @@ i{
     }
     .educationAndexperince .educationAndexperinceItem{
         flex-wrap: wrap;
+    }
+    .educationAndexperinceItem .durationPart{
+        width: 100%;
+        padding-left: 3%;
     }
 
 }
