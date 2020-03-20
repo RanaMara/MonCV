@@ -1,117 +1,325 @@
-body{
-    margin: 0;
+@font-face{    
+	font-family: 'Roboto';
+	src: url('webFonts/RobotoCondensed-Light-webfont.eot');
+	src: url('webFonts/RobotoCondensed-Light-webfont.eot?iefix') format('eot'),
+	     url('webFonts/RobotoCondensed-Light-webfont.woff') format('woff'),
+	     url('webFonts/RobotoCondensed-Light-webfont.ttf') format('truetype'),
+	     url('webFonts/RobotoCondensed-Light-webfont.svg#webFonts') format('svg');
+}
+*{
+    box-sizing: border-box;
     padding: 0;
-    height: 100%;
+    margin: 0;
+}
+body{
+    background-color: black;
+    font-family: 'Roboto', Arial, sans-serif;
+    word-wrap: break-word;
+    line-height: 20px ;
+}
+i{
+    color:#FDD835;
+}
+
+/* container */
+
+#container{
+    display: flex;
     width: 100%;
-    background-color: white;
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    }
+    margin: 0 auto;
+    min-width: 360px;
+    max-width: 1200px;
+    min-height: 100%;
+}
+
+#container ul{
+    list-style: none;
+}
+
+/* sidebar */
+
+#container #sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #FDD835;
+    align-content: space-between;
+    min-height: 100%;
+    width: 30%;
+    margin: 0 auto;
+}
+
+#container  #sidebar h4{
+    text-transform: uppercase;
+    background-color: #424242;
+    font-size: 1.6em;
+    color: #FDD835;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom:25px;
+}
+
+
+/* sidebar profileImage */
+#sidebar .profileImage{
+    align-items: center;
+}
+
+#sidebar .profileImage img{
+    border:4px solid rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    width: 218px;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: 95px;
+}
+
+/* sidebar contactInfo */
+
+#sidebar .contactInfo{
+    margin-top:20px;
+}
+
+#sidebar .contactInfo .contactInfoDetails{
+    padding: 30px;
+    width: 80%;
+}
+
+#sidebar .contactInfo li{
+    margin: 1em 0;
+}
+
+/* sidebar about */
+
+#sidebar .about{
+    flex: 2;
+}
+
+#sidebar .about p{
+    /* margin-top: 40px; */
+    text-align: justify;
+    padding: 30px;
+    line-height: 25px;
+}
+
+/* sidebar interestsSection */
+#sidebar .interestsSection{
+    margin-bottom: 50px;
+    text-align:  center;
+}
+
+#sidebar .interests{
+    align-items: flex;
+    /* align-content: space-around; */
+    justify-content: center;
+}
+
+#sidebar #interests i{
+    color:#424242;
+    display: inline-block;
+    font-size:44px;
+    padding: 10px;
+    border: 2px solid #424242;
+    border-radius: 100%;
+}
+
+/* content */
+
+#container #content{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color:#FAFAFA;
+    margin: 0 auto;
+    padding: 5%;
+    min-height: 100%;
+}
+#container #content .lastName{
+    text-transform: uppercase;
+    font-weight: normal;
+    color: black;
+    font-size: 4em;
+    line-height: 4rem;
+}
+#container #content .firstName{
+    text-transform: uppercase;
+    color: #FDD835;
+    font-weight:bold;
+    font-size: 4em;
+    line-height: 6rem;
+}
+
+#container #content .job{
+    text-transform: capitalize;
+    color: #424242;
+    font-size: 2em;
+}
+
+#container #content .job .jobFirstPart{
+    border-bottom: 3px solid #FDD835;
+}
+
+
+#container #content h1{
+    color: black;
+    text-transform: uppercase;
+    border-bottom: 3px solid #FDD835;
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+#container #content h1 .fas{
+    display: inline-block;
+    width: 70px;
+    font-size: 36px;
+    line-height: 4rem;
+}
+
+/* content nameAndCareerSection */
+#content  .nameAndCareerSection{
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+/* content educationAndexperince */
+
+#content .educationAndexperince{
+    display: flex;
+    flex-direction: column;
+}
+
+#content .educationAndexperince .educationAndexperinceItem{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#content .educationAndexperince .educationAndexperinceItem .descriptionPart{
+    width: 60%;
+}
+
+#content .educationAndexperince .educationAndexperinceItem .durationPart{
+    width: 40%;
+    padding-left: 3%;
+}
+
+#content .educationAndexperince .educationAndexperinceItem .durationPart .date{
+    display: block;
+    font-size: 1rem;
+}
+
+#content .educationAndexperince .educationAndexperinceItem .durationPart .place{
+    display: block;
+}
+
+#content .educationAndexperince .educationAndexperinceItem .descriptionPart .companyName{
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#content .educationAndexperince .educationAndexperinceItem .descriptionPart .jobTitle{
+    text-transform: capitalize;
+    display: block;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+#content .educationAndexperince .educationAndexperinceItem .descriptionPart p{
+    text-align: justify;
+    padding-top: 20px;
+}
+
+/* content recommendation */
+
+#content #recommendation{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+}
+
+.contactName{
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+ .firstContact{
+    width: 50%;
+}
+
+ .secondContact{
+    width: 50%;
+}
+
+/* On the screens, when the window width is at most 768px for the smartphone */
+@media screen and ( max-width : 768px){
     #container{
-        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 100%;
-        max-width: 1200px;
-        margin: 0 auto ;
-        
-
     }
-    #sidebare{
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        height: 100%;
-        margin-right:10px;
-        
+    #container #sidebar{
+        min-width: 100%;
     }
-    #content{
-        display: flex;
-        flex-direction: column;
-        width: 75%;
-        height: 100%;
-          
+    #container #content{
+        min-width: 100%;
     }
-    .ContactInfo{
-        padding-top:10%;
-        background-color:#D3D3D3;
-        text-align: center;
-        margin-bottom: 5px;
-        padding-bottom: 10px;
+    #container #content .firstName{
+        font-size: 2em;
     }
-    .profileImage{
-        border-radius: 100%;
-
+    #container #content .lastName{
+        font-size: 2em;
     }
-    .language{
-        background-color: #D3D3D3;
-        text-align: left;
+    #container #content .job{
+        font-size: 18px;
     }
-    ul li{
-        display: flex;
-    }
-    ul li span{
-        width: 40%;
-    }
-    ul li span.rating{
-        display: flex;
-        justify-content: space-around; 
-    }
-    .dot{
-        width: 15px;
-        height: 15px;
-        background-color:white;
-        border-radius: 100%;
-        display: inline-block;
-    }
-    .dot.active{
-        background-color: darkblue;
-    }
-    .interests{
-        padding-top: 20px;
-        background-color: #D3D3D3;
-        height: auto;
-        padding-bottom: 100%;
-    }
-    .skills{
-        background-color: #D3D3D3;  
-    }
-    #content .resume{
-        padding-top: 15px;
-        background-color: #D3D3D3;
-    }
-    #content .experince{
-        display: flex;
-        color: steelblue; 
+    #container #content h1{
+        font-size: 18px;
         font-weight: bold;
-        justify-content: space-between;
     }
-    #content .training{
-        display: flex;
-        justify-content: space-between;
+    #container #content h1 .fas{
+        width: 50px;
     }
-    ul .decorationOfList{
-        list-style-type:circle;
+    #content .educationAndexperince .educationAndexperinceItem{
+        flex-wrap: wrap;
     }
-    #content .resume h2{
-        font-size: 2rem;
-        letter-spacing: 1px;
-        text-align: center;
-        color: steelblue;
-        margin: 10px 0 15px;
+    #content .educationAndexperince .educationAndexperinceItem .descriptionPart{
+        width: 100%;
     }
-    #content .resume p{
-        text-align: justify;
-        padding: 5px;
-        margin-bottom: 10px;
+    #content .educationAndexperince .educationAndexperinceItem .durationPart{
+        width: 95%;
     }
-    h3,h4{
-        color: steelblue;  
-        text-decoration: underline;
+    #content .educationAndexperince .educationAndexperinceItem .durationPart .date{
+        display: inline;
+        font-size: 1rem;
     }
-    .profileImage img{
-        width: 150px;
-        height: 150px;
-        border-radius: 100%;
+    
+    #content .educationAndexperince .educationAndexperinceItem .durationPart .place{
+        display: inline;
+    }
+    #content  .nameAndCareerSection{
+        margin-bottom: 50px;
+    }
+    #content .educationAndexperince .educationAndexperinceItem .descriptionPart .companyName{
+        font-size: 1.2em;
+        padding-top: 10px;
+    }
+    
+}
 
+/* On the screens, when the window width is between 769px and at most 991px for the tablet */
+@media screen and ( min-width : 768px) and ( max-width : 991px){
+    
+    .educationAndexperinceItem .descriptionPart{
+        overflow: visible;
+        width: 100%;    
     }
+    .educationAndexperinceItem .durationPart{
+        width: 100%;
+        padding-left: 3%;
+    }
+
+}
