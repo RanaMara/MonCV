@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400&display=swap&subset=latin-ext');
 @font-face{    
 	font-family: 'Roboto';
 	src: url('webFonts/RobotoCondensed-Light-webfont.eot');
@@ -14,7 +15,7 @@
 html,
 body{
     height: 100%;
-    widows: 100%;
+    width: 100%;
 }
 body{
     background-color: black;
@@ -23,7 +24,11 @@ body{
     line-height: 20px ;
 }
 i{
-    color:#FDD835;
+    color:#feca03;
+}
+a{
+    text-decoration: none;
+    color:#4d4d4d;
 }
 
 /* container */
@@ -39,6 +44,7 @@ i{
 
 #container ul{
     list-style: none;
+    color: #4d4d4d;
 }
 
 /* sidebar */
@@ -46,7 +52,7 @@ i{
 #container #sidebar{
     display: flex;
     flex-direction: column;
-    background-color: #FDD835;
+    background-color: #feca03;
     align-content: space-between;
     min-height: 100%;
     width: 30%;
@@ -55,15 +61,15 @@ i{
 
 #container  #sidebar h4{
     text-transform: uppercase;
-    background-color: #424242;
+    background-color: #404040;
     font-size: 1.6em;
-    color: #FDD835;
+    color: #feca03;
     font-weight: bold;
     text-align: center;
     width: 100%;
-    padding: 10px;
-    margin-top: 25px;
-    margin-bottom:25px;
+    /* margin:auto; */
+    padding: 15px 0;
+    /* height: 50px; */
 }
 
 
@@ -78,19 +84,13 @@ i{
     width: 218px;
     height: auto;
     display: block;
-    margin: auto;
-    margin-top: 95px;
+    margin: 40px auto;
 }
 
 /* sidebar contactInfo */
 
-#sidebar .contactInfo{
-    margin-top:20px;
-}
-
 #sidebar .contactInfo .contactInfoDetails{
     padding: 30px;
-    width: 80%;
 }
 
 #sidebar .contactInfo li{
@@ -104,30 +104,32 @@ i{
 }
 
 #sidebar .about p{
-    /* margin-top: 40px; */
     text-align: justify;
     padding: 30px;
     line-height: 25px;
+    color: #4d4d4d;
 }
 
 /* sidebar interestsSection */
 #sidebar .interestsSection{
-    margin-bottom: 50px;
     text-align:  center;
 }
 
-#sidebar .interests{
-    align-items: flex;
-    /* align-content: space-around; */
+#sidebar #interests{
+    display: flex;
+    align-content: space-around;
     justify-content: center;
+    padding: 30px 0;
+    
 }
 
 #sidebar #interests i{
     color:#424242;
     display: inline-block;
-    font-size:44px;
+    font-size:36px;
     padding: 10px;
-    border: 2px solid #424242;
+    margin-right: 15px;
+    border: 2px solid #4d4d4d;
     border-radius: 100%;
 }
 
@@ -139,7 +141,7 @@ i{
     width: 70%;
     background-color:#FAFAFA;
     margin: 0 auto;
-    padding: 5%;
+    padding:0 5%;
     min-height: 100%;
 }
 #container #content .lastName{
@@ -151,7 +153,7 @@ i{
 }
 #container #content .firstName{
     text-transform: uppercase;
-    color: #FDD835;
+    color: #feca03;
     font-weight:bold;
     font-size: 4em;
     line-height: 6rem;
@@ -159,19 +161,19 @@ i{
 
 #container #content .job{
     text-transform: capitalize;
-    color: #424242;
+    color: #4d4d4d;
     font-size: 2em;
 }
 
 #container #content .job .jobFirstPart{
-    border-bottom: 3px solid #FDD835;
+    border-bottom: 3px solid #feca03;
 }
 
 
 #container #content h1{
     color: black;
     text-transform: uppercase;
-    border-bottom: 3px solid #FDD835;
+    border-bottom: 3px solid #feca03;
     margin-bottom: 50px;
     font-size: 2em;
 }
@@ -194,6 +196,7 @@ i{
 #content .educationAndexperince{
     display: flex;
     flex-direction: column;
+    color: #4d4d4d;
 }
 
 #content .educationAndexperince .educationAndexperinceItem{
@@ -225,17 +228,19 @@ i{
     display: block;
     font-size: 1.4em;
     font-weight: bold;
+    color:black;
 }
 
 #content .educationAndexperince .educationAndexperinceItem .descriptionPart .jobTitle{
     text-transform: capitalize;
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: lighter;
 }
 
 #content .educationAndexperince .educationAndexperinceItem .descriptionPart p{
     text-align: justify;
+    font-size: 0.9em;
     padding-top: 20px;
 }
 
@@ -245,6 +250,9 @@ i{
     display: flex;
     flex-direction: row;
     margin: 30px 0;
+}
+#content #recommendation li{
+    margin: 0 0 8px 0;
 }
 
 .contactName{
@@ -261,7 +269,7 @@ i{
 }
 
 /* On the screens, when the window width is at most 768px for the smartphone */
-@media screen and ( max-width : 768px){
+@media screen and ( min-width : 100px) and ( max-width : 767px){
     #container{
         flex-direction: column;
         width: 100%;
@@ -271,6 +279,7 @@ i{
     }
     #container #content{
         min-width: 100%;
+        padding: 30px;
     }
     #container #content .firstName{
         font-size: 2em;
@@ -296,6 +305,9 @@ i{
     }
     #content .educationAndexperince .educationAndexperinceItem .durationPart{
         width: 95%;
+    }
+    #content .educationAndexperince .educationAndexperinceItem i{
+        width: 3%;
     }
     #content .educationAndexperince .educationAndexperinceItem .durationPart .date{
         display: inline;
@@ -323,8 +335,7 @@ i{
         width: 100%;    
     }
     .educationAndexperinceItem .durationPart{
-        width: 100%;
+        width: 95%;
         padding-left: 3%;
     }
-
 }
