@@ -291,7 +291,7 @@ a{
         font-size: 18px;
     }
     #container #content h1{
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
     }
     #container #content h1 .fas{
@@ -329,7 +329,10 @@ a{
 
 /* On the screens, when the window width is between 769px and at most 991px for the tablet */
 @media screen and ( min-width : 768px) and ( max-width : 991px){
-    
+    #container #content h1{
+        font-size: 24px;
+        font-weight: bold;
+    }
     .educationAndexperinceItem .descriptionPart{
         overflow: visible;
         width: 100%;    
